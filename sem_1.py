@@ -39,12 +39,53 @@
 #
 
 
-number = float(input('Input Number :'))
+# number = float(input('Input Number :'))
 
-number = number * 10 % 10
-print(int(number))
+# number = number * 10 % 10
+# print(int(number))
 
 # Напишите программу, которая принимает на вход число и проверяет, кратно ли оно 5 и 10 или 15, но не 30.
 
-number = int(input('Введите число: '))
-print((number%5 == 0 and number%10 == 0) or (number%15 == 0 and number%30 != 0))
+# number = int(input('Введите число: '))
+# print((number%5 == 0 and number%10 == 0) or (number%15 == 0 and number%30 != 0))
+
+
+# Напишите программу, которая выводит нечетные числа из заданного списка
+#  и останавливается, если встречает число 554.
+
+import random
+
+lst = [554]
+for i in range(random.randint(5,10)):
+    x = random.randint(500,600)
+    lst.append(x)
+
+print(lst)
+random.shuffle(lst)
+print(lst)
+
+for i in lst:
+    if(i == 554):
+        break
+    elif(i%2 != 0):
+        print(i, end=' ')  ## ------------- !!!!!!!!!!!
+print()
+
+
+# Сложить цифры вещественного числа
+
+number = '1.2345'
+sum = 0
+for i in number:
+    if ( i != '.'):
+        sum += int(i)
+print(sum)
+
+# Посчитайте, сколько раз символ встречается в строке
+
+str = 'Посчитайте, сколько раз символ встречается в строке'
+sum = 0
+for i in str:
+    if ( i == 'с'):
+        sum += 1
+print(sum)
