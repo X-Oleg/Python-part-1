@@ -27,7 +27,8 @@
 #         max = lst[i]
 # print(max)
 
-# Напишите программу, которая будет на вход принимать число N и выводить числа от -N до N
+# Напишите программу, которая будет на вход принимать число N и выводить 
+# числа от -N до N
 
 # n = int(input('Введите n: '))
 # for i in range(-n,n+1):
@@ -89,3 +90,14 @@ for i in str:
     if ( i == 'с'):
         sum += 1
 print(sum)
+
+# программа reverse
+N = 11
+A = list(range(N))
+print(A)
+ 
+for i in range(N//2):
+    A[i], A[N-i-1] = A[N-i-1], A[i]
+ 
+print(A)
+
