@@ -1,18 +1,31 @@
 # # lecture 3
 
-# sum = lambda x: x+10
-# mult = lambda x: x**2
+# def calc2(x):
+#     return x*10
 
-# print(sum(mult(2)))
+# def math(op, x):
+#     print(op(x))
 
-# f = sum
-# g = mult
+# math(calc2, 7) ## 70
 
-# # f(g(x))
-# def h(f, g, x): return f(g(x))
-# h= lambda f, g, x: f(g(x))
-# # h(sum, mult, 5)
-# print( h(lambda x: x+10, lambda x: x**2, 5) )
+
+sum = lambda x: x+10
+mult = lambda x: x**2
+
+print(sum(mult(2))) ## 14
+
+f = sum
+g = mult
+
+
+def h(f, g, x): return f(g(x))
+print(h(sum, mult, 7))          ## 59
+
+
+print(h(sum, mult, 5)) ## 35 
+
+print( h(lambda x: x+10, lambda x: x**2, 7) ) ## 59
+
 
 # ## 1
 # # f = open('f.txt', 'r')
@@ -70,16 +83,16 @@
 # Среди чисел не хватает одного, чтобы выполнялось условие A[i] - 1 = A[i-1]. 
 # Найдите это число.
 
-with open('file.txt', 'r') as rd:
-    lst = list(map(int, rd.read().split(' ')))
+# with open('file.txt', 'r') as rd:
+#     lst = list(map(int, rd.read().split(' ')))
 
-for i in range(1, len(lst)):
-    if lst[i] != lst [i-1] +1:
-        lst.insert(i, lst[i]-1)
+# for i in range(1, len(lst)):
+#     if lst[i] != lst [i-1] +1:
+#         lst.insert(i, lst[i]-1)
 
-print (lst)
-with open('file.txt', 'w') as rd:
-    rd.write(' '.join(map(str, lst)))
+# print (lst)
+# with open('file.txt', 'w') as rd:
+#     rd.write(' '.join(map(str, lst)))
 
 
 
@@ -88,10 +101,10 @@ with open('file.txt', 'w') as rd:
 # st1 = '0 1 2 3 4 6 7 8'
 # lst = st1.split(' ')
 
-# Напишите программу, удаляющую из текста все слова, содержащие "абв".
+# # Напишите программу, удаляющую из текста все слова, содержащие "абв".
 
-str = '''Напишите абв напиабв програбвмму программу, удаляющую из этого абв 
-текста все вабвс слова, содерабващие содержащие "абв"'''
-lst = list(filter(lambda x: 'абв' not in x, str.split(' ')))
-print(' '.join(lst))
+# str = '''Напишите абв напиабв програбвмму программу, удаляющую из этого абв 
+# текста все вабвс слова, содерабващие содержащие "абв"'''
+# lst = list(filter(lambda x: 'абв' not in x, str.split(' ')))
+# print(' '.join(lst))
 
