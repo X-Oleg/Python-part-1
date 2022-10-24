@@ -9,22 +9,22 @@
 # math(calc2, 7) ## 70
 
 
-sum = lambda x: x+10
-mult = lambda x: x**2
+# sum = lambda x: x+10
+# mult = lambda x: x**2
 
-print(sum(mult(2))) ## 14
+# print(sum(mult(2))) ## 14
 
-f = sum
-g = mult
-
-
-def h(f, g, x): return f(g(x))
-print(h(sum, mult, 7))          ## 59
+# f = sum
+# g = mult
 
 
-print(h(sum, mult, 5)) ## 35 
+# def h(f, g, x): return f(g(x))
+# print(h(sum, mult, 7))          ## 59
 
-print( h(lambda x: x+10, lambda x: x**2, 7) ) ## 59
+
+# print(h(sum, mult, 5)) ## 35 
+
+# print( h(lambda x: x+10, lambda x: x**2, 7) ) ## 59
 
 
 # ## 1
@@ -83,16 +83,16 @@ print( h(lambda x: x+10, lambda x: x**2, 7) ) ## 59
 # Среди чисел не хватает одного, чтобы выполнялось условие A[i] - 1 = A[i-1]. 
 # Найдите это число.
 
-# with open('file.txt', 'r') as rd:
-#     lst = list(map(int, rd.read().split(' ')))
+with open('file.txt', 'r') as rd:
+    lst = list(map(int, rd.read().split(' ')))
 
-# for i in range(1, len(lst)):
-#     if lst[i] != lst [i-1] +1:
-#         lst.insert(i, lst[i]-1)
+for i in range(1, len(lst)):
+    if lst[i] != lst [i-1] +1:
+        lst.insert(i, lst[i]-1)
 
-# print (lst)
-# with open('file.txt', 'w') as rd:
-#     rd.write(' '.join(map(str, lst)))
+print (lst)
+with open('file.txt', 'w') as rd:
+    rd.write(' '.join(map(str, lst)))
 
 
 
